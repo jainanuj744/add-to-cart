@@ -10,10 +10,13 @@ export default function Navbar() {
       }}
     >
       <span className="logo">Redux Store</span>
-
       <div>
-        <Link className="navLink" to={"/"}>Home</Link>
-        <Link className="navLink" to={"/cart"}>Cart</Link>
+        <Link className="navLink" to={"/"}>
+          Home
+        </Link>
+        <Link className="navLink" to={"/cart"}>
+          Cart
+        </Link>
         <span className="cartCount">Cart Items : 0</span>
       </div>
     </div>

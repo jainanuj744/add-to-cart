@@ -1,5 +1,9 @@
-export default function Home(){
-    return(
-        <div>I am home</div>
-    )
+import Product from "../Component/Product";
+
+export default function Home() {
+  return (
+    <div>
+      <Product />
+    </div>
+  );
 }
