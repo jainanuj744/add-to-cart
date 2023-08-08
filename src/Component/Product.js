@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { add } from "../Store/cartSlice";
 
 export default function Product() {
 
@@ -195,6 +197,13 @@ export default function Product() {
     });
   },[]);
 
+  let dispatch = useDispatch();
+
+  let handleAddToCart = (obj)=>{
+    dispatch(add(obj))
+
+  }
+
   return (
     <>
       <div className="productsWrapper">
@@ -204,7 +213,7 @@ export default function Product() {
               <img src={obj.image}></img>
               <h6>{obj.title}</h6>
               <h5>${obj.price}</h5>
-              <button className="btn">Add to cart</button>
+              <button className="btn" onClick={()=>{handleAddToCart(obj)}}>Add to cart</button>
             </div>
           );
         })}
