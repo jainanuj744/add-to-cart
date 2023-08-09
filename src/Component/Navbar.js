@@ -15,7 +15,9 @@ export default function Navbar() {
       }}
     >
       <span className="logo">Redux Store</span>
-      <div>
+      <div style={{
+        marginBottom:"50px"
+      }}>
         <Link className="navLink" to={"/"}>
           Home
         </Link>
