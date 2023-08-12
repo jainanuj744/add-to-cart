@@ -37,9 +37,6 @@ export default function Product() {
     return <h2>......Loading</h2>
   }
 
-
-
-
   return (
     <>
       <div className="productsWrapper">
